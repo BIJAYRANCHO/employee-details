@@ -24,7 +24,8 @@ def add_employee():
 def get_employee_details():
     employeeData = app.current_request.json_body
     id_hash = hashlib.md5(employeeData.get('email').encode('utf-8')).hexdigest()
-    employee_det = EmployeeDetails.fetch(id_hash)
+    Employee = EmployeeDetails.get_object_by_idh(id_hash)
+    employee_det = Employee.fetch_data()
     return employee_det
 
 @app.route('/delete-employee', methods=['DELETE'])
