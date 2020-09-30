@@ -4,17 +4,17 @@
         "partitionKey" : "idh",
         "partitionKeyType" : "HASH",
         "partitionKeyDef" : "S",
-        "sortKey" : "mobile",
+        "sortKey" : "sort",
         "sortKeyType" : "RANGE",
-        "sortKeyDef" : "N"
+        "sortKeyDef" : "S"
     },
     "employee_login":
     {
         "partitionKey" : "idh",
         "partitionKeyType" : "HASH",
         "partitionKeyDef" : "S",
-        "sortKey" : "mobile",
+        "sortKey" : "sort",
         "sortKeyType" : "RANGE",
-        "sortKeyDef" : "N"
+        "sortKeyDef" : "S"
     }
 }

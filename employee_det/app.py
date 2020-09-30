@@ -4,12 +4,18 @@ import json
 import hashlib
 from chalicelib import *
 from chalicelib.model import *
+from chalicelib.router import *
 
 app = Chalice(app_name='employee_det')
+app.register_blueprint(BlueprintRegister.router)
+app.api.cors = True
+app.debug = True
 
-@app.route('/')
-def index():
-    return jsonify(msg='This is the index page.', resp_code='tip', status_code=200)
+#app.register_blueprint(router)
+
+# @app.route('/')
+# def index():
+#     return jsonify(msg='This is the index page.', resp_code='tip', status_code=200)
 
 @app.route('/add-employee', methods=['POST'])
 def add_employee():
@@ -38,11 +44,3 @@ def delete_employee():
 @app.route('/get-all-employees', methods=['GET'])
 def get_all_employees():
     return EmployeeDetails.fetch_all()
-
-@app.route('/hello')
-def hello_world():
-    return return_func()
-
-@app.route('/world')
-def world():
-    return jsonify(msg='this is message', resp_code='tim', status_code=200)

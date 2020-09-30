@@ -1,3 +1,4 @@
+import json
 
 class return_func():
     def __call__(self):
@@ -5,4 +6,4 @@ class return_func():
 
 class jsonify():
     def __call__(self,**kwargs):
-        return kwargs
+        return json.dumps(kwargs)

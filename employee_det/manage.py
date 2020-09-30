@@ -11,6 +11,7 @@ class main():
         self.cmd = cmd
         if self.cmd == 'create_db':
             createDB = DBCreation()
+            return createDB
 
 if __name__ == '__main__':
     main = main()
