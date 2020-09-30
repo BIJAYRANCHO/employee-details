@@ -1,0 +1,20 @@
+ {
+    "employee_details":
+    {
+        "partitionKey" : "idh",
+        "partitionKeyType" : "HASH",
+        "partitionKeyDef" : "S",
+        "sortKey" : "mobile",
+        "sortKeyType" : "RANGE",
+        "sortKeyDef" : "N"
+    },
+    "employee_login":
+    {
+        "partitionKey" : "idh",
+        "partitionKeyType" : "HASH",
+        "partitionKeyDef" : "S",
+        "sortKey" : "mobile",
+        "sortKeyType" : "RANGE",
+        "sortKeyDef" : "N"
+    }
+}

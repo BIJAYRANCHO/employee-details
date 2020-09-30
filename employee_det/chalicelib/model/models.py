@@ -1,10 +1,11 @@
 import boto3
+from chalicelib.settings import DynaboDB
 from chalicelib.model.config.oper import TableOper
 
-dynamoDb = boto3.resource('dynamodb')
+dynamoDb = DynaboDB.dynamoDb
 
 class EmployeeDetails():
-    def __init__(self):
+    def __init__(self): 
         self.tableName = 'employee_details'
         self.table = dynamoDb.Table(self.tableName)
 
@@ -17,5 +18,5 @@ class EmployeeDetails():
 
     def get_object_by_idh(self, idh):
         self.idh = idh
-        self.object = TableOper(self.idh, self.table) 
+        self.object = TableOper(self.idh, self.table)
         return self.object   
