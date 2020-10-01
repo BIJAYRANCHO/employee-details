@@ -2,7 +2,8 @@ import json
 
 class jsonify():
     def __call__(self, **kwargs):
-        return json.dumps(kwargs)
+        self.data = kwargs
+        return json.dumps(self.data)
 
 class custom_checking():
     def check_employee_params(self, dict_data):
