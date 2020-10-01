@@ -7,7 +7,7 @@ class TableOper():
         self.table = table
         self.sortKey = sortKey
 
-    def fetch_data(self):
+    def fetch_one(self):
         self.response = self.table.get_item(Key={'idh': self.idh, 'sort': self.sortKey}).get('Item')
         return self.response
 
