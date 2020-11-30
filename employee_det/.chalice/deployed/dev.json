@@ -3,19 +3,19 @@
     {
       "name": "default-role",
       "resource_type": "iam_role",
-      "role_arn": "arn:aws:iam::251884256228:role/employee_det-dev",
+      "role_arn": "",
       "role_name": "employee_det-dev"
     },
     {
       "name": "api_handler",
       "resource_type": "lambda_function",
-      "lambda_arn": "arn:aws:lambda:ap-south-1:251884256228:function:employee_det-dev"
+      "lambda_arn": ""
     },
     {
       "name": "rest_api",
       "resource_type": "rest_api",
-      "rest_api_id": "vy4n9lp1i1",
-      "rest_api_url": "https://vy4n9lp1i1.execute-api.ap-south-1.amazonaws.com/api/"
+      "rest_api_id": "",
+      "rest_api_url": ""
     }
   ],
   "schema_version": "2.0",
